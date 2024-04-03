@@ -8,5 +8,4 @@ let person: [string, number] = ["Max", 21];
 //for test
 person = ["Min", 34];
 
-// export {};
 export { person };

@@ -14,6 +14,4 @@ function customError() {
   throw new Error("Error");
 }
 
-// export {};
-
 export { showMessage, calc, customError };

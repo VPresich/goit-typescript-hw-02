@@ -14,5 +14,4 @@ let literal: "enable" | "disable";
 // for test
 literal = "disable";
 
-export {};
 export { union, literal };
