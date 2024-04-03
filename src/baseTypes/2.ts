@@ -1,5 +1,6 @@
-let anything = -20;
-anything = 'Text';
+let anything: any = -20;
+anything = "Text";
 anything = {};
 
-export {};
+// export { };
+export { anything };
