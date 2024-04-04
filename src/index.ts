@@ -1,5 +1,5 @@
 // test of baseTypes
-import "./baseTypes/baseTypesTests";
+//import "./baseTypes/baseTypesTests";
 
 // test of Generic
-import "./generic/genericTests";
+//import "./generic/genericTests";

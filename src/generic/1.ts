@@ -3,9 +3,17 @@
   Доповніть цю функцію, використовуючи generics, щоб вона повертала правильний тип.
 */
 
-function getPromise<Type extends (string | number)[]>(): Promise<Type> {
-  return new Promise((resolve) => {
-    resolve(["Text", 50] as Type);
+//1)
+function getPromise1<T extends (string | number)[]>(): Promise<T> {
+  return new Promise<T>((resolve) => {
+    resolve(["Text", 50] as T);
+  });
+}
+
+//2)
+function getPromise(): Promise<(string | number)[]> {
+  return new Promise<(string | number)[]>((resolve) => {
+    resolve(["Text", 50]);
   });
 }
 

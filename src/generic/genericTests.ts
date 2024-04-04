@@ -8,17 +8,16 @@ console.log("typeof getPromise: ", typeof getPromise);
 console.log("Generic. Test - 2");
 import { AllType, compare } from "./2";
 
-const top: AllType = {
+type TopType = Pick<AllType, "name" | "color">;
+type BottomType = Pick<AllType, "position" | "weight">;
+
+const top: TopType = {
   name: "name_1",
-  position: 1,
   color: "red",
-  weight: 10,
 };
 
-const bottom: AllType = {
-  name: "name_2",
+const bottom: BottomType = {
   position: 2,
-  color: "blue",
   weight: 20,
 };
 
@@ -42,8 +41,8 @@ console.log("typeof  merge", typeof merge, ", value: ", merge(obj1, obj2));
 
 // test of 4.ts
 console.log("Generic. Test - 4");
-import { Props, Page } from "./4";
-const pageProps: Props = { title: "My Page Title" };
+import { IProps, Page } from "./4";
+const pageProps: IProps = { title: "My Page Title" };
 const page = new Page(pageProps);
 console.log("typeof pageProps: ", typeof pageProps, ", value: ", pageProps);
 console.log("typeof page: ", typeof page, ", value: ", page);
